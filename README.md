@@ -1,2 +1,2 @@
 # Semantic-Segmentation-TensorFlow
-This repository include a few semantic segmentation models, which are implemented by tensorflow.
+This repository include some semantic segmentation models, which are implemented by tensorflow.
