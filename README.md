@@ -1,12 +1,12 @@
-## Semantic Segmentation Model in TensorFlow
+# Semantic Segmentation Model in TensorFlow
 
-###Description
+## Description
 >This repository contains some sementic segmentation models implemented by tensorflow and the pipeline of training and evaluating models as follows:
 - Convert dataset to TFRecord files format.
 - Data augmentation (e.g., scaling, padding, cropping and flipping).
 - Training various segmentation models with different datasets.
 - Evaluting trained models with mean Intersection over Union (mIoU).
-###Models
+## Models
 - FCN8: [Fully Convolutional Networks for Semantic Segmentation](https://arxiv.org/abs/1411.4038)
 - U-Net: [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597)
 - SegNet: [SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation](https://arxiv.org/abs/1511.00561)
@@ -25,7 +25,7 @@ Then split the dataset into four partitions (training images, training labels, v
 >`cd dataset`
 ` python build_TFRecord.py --train-image-path folder_name --train-label-path [folder_name] --val-image-path [folder_name] --val-label-path [folder_name]`
 
-###Training with pascal_voc2012 or other dataset...
+## Training with pascal_voc2012 or other dataset...
 Having prepared the dataset of TFRecord file format, the pretrained weights of both [vgg_16](https://github.com/tensorflow/models/tree/master/research/slim) and [resnet_v2_101](https://github.com/tensorflow/models/tree/master/research/slim) should be downloaded and restored in semantic segmentation model. The folders should be set up in following structure:
 >├── pretrained                   
 &nbsp;| &emsp;   |── vgg_16.ckpt
