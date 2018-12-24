@@ -6,6 +6,7 @@ This repository contains some sementic segmentation models implemented by tensor
 - Data augmentation (e.g., scaling, padding, cropping and flipping).
 - Training various segmentation models with different datasets.
 - Evaluting trained models with mean Intersection over Union (mIoU).
+
 ## Models
 - FCN8: [Fully Convolutional Networks for Semantic Segmentation](https://arxiv.org/abs/1411.4038)
 - U-Net: [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597)
@@ -17,7 +18,8 @@ This repository contains some sementic segmentation models implemented by tensor
 - GCN: [Large Kernel Matters——Improve Semantic Segmentation by Global Convolutional Network](https://arxiv.org/abs/1703.02719)
 - ENet: [ENet: A Deep Neural Network Architecture for Real-Time Semantic Segmentation](https://arxiv.org/abs/1606.02147)
 - ICNet: [ICNet for Real-Time Semantic Segmentation on High-Resolution Images](https://arxiv.org/abs/1704.08545)
-###Dataset preparing
+
+## Dataset preparing
 Before training a semantic segmentation model, the dataset should be downloaded and converted to TFRecord files. 
 - Download datasets([pascal_voc2012](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/index.html), [cityscapes](https://www.cityscapes-dataset.com/dataset-overview/#features), [ADE20K](http://groups.csail.mit.edu/vision/datasets/ADE20K/), ......)
 Then split the dataset into four partitions (training images, training labels, validation images and validation labels ) and put them in separate folders.
@@ -27,9 +29,8 @@ Then split the dataset into four partitions (training images, training labels, v
 
 ## Training with pascal_voc2012 or other dataset...
 Having prepared the dataset of TFRecord file format, the pretrained weights of both [vgg_16](https://github.com/tensorflow/models/tree/master/research/slim) and [resnet_v2_101](https://github.com/tensorflow/models/tree/master/research/slim) should be downloaded and restored in semantic segmentation model. The folders should be set up in following structure:
-├── pretrained                   
+├ ── pretrained                   
 &nbsp;| &emsp;   |── vgg_16.ckpt
-
 &nbsp;| &emsp;   |── resnet_v2_101.ckpt
 
 Training shell script (using pascal_voc2012):
