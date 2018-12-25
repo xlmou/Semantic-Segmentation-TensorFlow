@@ -42,25 +42,45 @@ Having prepared the dataset of TFRecord file format, the pretrained weights of b
 
 Training shell script (using pascal_voc2012):
 - FCN8: 
+
 ```python train.py --data-dir './dataset/tfrecord' --restore-from './pretrained/vgg_16.ckpt' --dataset 'pascal_voc2012' --pretrained-model 'vgg_16' --segmentation-model 'FCN8'```
+
 - U-Net: 
+
 ```python train.py --data-dir './dataset/tfrecord' --dataset 'pascal_voc2012' --segmentation-model 'U_Net'```
+
 - SegNet: 
+
 ```python train.py --data-dir './dataset/tfrecord' --dataset 'pascal_voc2012' --segmentation-model 'Seg_Net'```
+
 - Deeplab-v1: 
+
 ```python train.py --data-dir './dataset/tfrecord' --restore-from './pretrained/vgg_16.ckpt' --dataset 'pascal_voc2012' --pretrained-model 'vgg_16' --segmentation-model 'Deeplab_v1'```
+
 - Deeplab-v2: 
+
 ```python train.py --data-dir './dataset/tfrecord' --restore-from './pretrained/resnet_v2_101.ckpt' --dataset 'pascal_voc2012' --pretrained-model 'resnet_v2_101' --segmentation-model 'Deeplab_v2'```
-- Deeplab-v3: 
+
+- Deeplab-v3:
+
 ```python train.py --data-dir './dataset/tfrecord' --restore-from './pretrained/resnet_v2_101.ckpt' --dataset 'pascal_voc2012' --pretrained-model 'resnet_v2_101' --segmentation-model 'Deeplab_v3'```
+
 - PSPNet: 
+
 ```python train.py --data-dir './dataset/tfrecord' --restore-from './pretrained/resnet_v2_101.ckpt' --dataset 'pascal_voc2012' --pretrained-model 'resnet_v2_101' --segmentation-model 'PSPNet'```
+
 - GCN: 
+
 ```python train.py --data-dir './dataset/tfrecord' --restore-from './pretrained/resnet_v2_101.ckpt' --dataset 'pascal_voc2012' --pretrained-model 'resnet_v2_101' --segmentation-model 'GCN'```
+
 - ENet: 
+
 ```python train.py --data-dir './dataset/tfrecord' --dataset 'pascal_voc2012' --segmentation-model 'ENet'```
+
 - ICNet: 
+
 ```python train.py --data-dir './dataset/tfrecord' --dataset 'pascal_voc2012' --segmentation-model 'ICNet'```
+
 ```
 Arguments:
 --data-dir : Where the TFRecord file locate.
