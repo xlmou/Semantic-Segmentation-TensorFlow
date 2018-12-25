@@ -11,16 +11,16 @@ This repository contains some sementic segmentation models implemented by tensor
 The code is modified from [Deeplab v2](https://github.com/DrSleep/tensorflow-deeplab-resnet) and only three datasets (pascal_voc2012, cityscapes and ADE20K) are supported.
 
 ## Models
-- FCN8: [Fully Convolutional Networks for Semantic Segmentation](https://arxiv.org/abs/1411.4038)
-- U-Net: [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597)
-- SegNet: [SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation](https://arxiv.org/abs/1511.00561)
-- Deeplab-v1: [Semantic Image Segmentation with Deep Convolutional Nets and Fully Connected CRFs](https://arxiv.org/abs/1412.7062)
-- Deeplab-v2: [DeepLab: Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs](https://arxiv.org/abs/1606.00915)
-- Deeplab-v3: [Rethinking Atrous Convolution for Semantic Image Segmentation](https://arxiv.org/abs/1706.05587)
-- PSPNet: [Pyramid Scene Parsing Network](https://arxiv.org/abs/1612.01105)
+- FCN8([Author](https://github.com/shelhamer/fcn.berkeleyvision.org)): [Fully Convolutional Networks for Semantic Segmentation](https://arxiv.org/abs/1411.4038)
+- U-Net([Author(https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/)]): [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597)
+- SegNet([Author](https://github.com/alexgkendall/SegNet-Tutorial)): [SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation](https://arxiv.org/abs/1511.00561)
+- Deeplab-v1([Author](http://liangchiehchen.com/projects/DeepLab-LargeFOV.html)): [Semantic Image Segmentation with Deep Convolutional Nets and Fully Connected CRFs](https://arxiv.org/abs/1412.7062)
+- Deeplab-v2([Author](http://liangchiehchen.com/projects/DeepLabv2_resnet.html)): [DeepLab: Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs](https://arxiv.org/abs/1606.00915)
+- Deeplab-v3([Author](https://github.com/sthalles/deeplab_v3)): [Rethinking Atrous Convolution for Semantic Image Segmentation](https://arxiv.org/abs/1706.05587)
+- PSPNet([Author](https://github.com/hszhao/PSPNet)): [Pyramid Scene Parsing Network](https://arxiv.org/abs/1612.01105)
 - GCN: [Large Kernel Matters——Improve Semantic Segmentation by Global Convolutional Network](https://arxiv.org/abs/1703.02719)
-- ENet: [ENet: A Deep Neural Network Architecture for Real-Time Semantic Segmentation](https://arxiv.org/abs/1606.02147)
-- ICNet: [ICNet for Real-Time Semantic Segmentation on High-Resolution Images](https://arxiv.org/abs/1704.08545)
+- ENet([Author](https://github.com/TimoSaemann/ENet)): [ENet: A Deep Neural Network Architecture for Real-Time Semantic Segmentation](https://arxiv.org/abs/1606.02147)
+- ICNet([Author](https://github.com/hszhao/ICNet)): [ICNet for Real-Time Semantic Segmentation on High-Resolution Images](https://arxiv.org/abs/1704.08545)
 
 ## Dataset preparing
 Before training a semantic segmentation model, the dataset should be downloaded and converted to TFRecord files. 
