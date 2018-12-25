@@ -92,7 +92,7 @@ Arguments:
 ```
 
 ## Evaluation
-- **Simgle scale evaluation (such as FCN8):**
+- **Single scale evaluation (such as FCN8):**
 
 ```
 python evaluate.py --data-dir './dataset/tfrecord' './logs/xxxxx.ckpt' --dataset 'pascal_voc2012' --segmentation-model 'FCN8'
