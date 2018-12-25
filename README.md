@@ -24,10 +24,11 @@ Before training a semantic segmentation model, the dataset should be downloaded 
 - Download datasets([pascal_voc2012](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/index.html), [cityscapes](https://www.cityscapes-dataset.com/dataset-overview/#features), [ADE20K](http://groups.csail.mit.edu/vision/datasets/ADE20K/), ......)
 Then split the dataset into four partitions (training images, training labels, validation images and validation labels ) and put them in separate folders.
 - Convert dataset to TFRecord files:
-
+```
 `cd dataset`
 
 `python build_TFRecord.py --train-image-path folder_name --train-label-path [folder_name] --val-image-path [folder_name] --val-label-path [folder_name]`
+```
 
 ## Training with pascal_voc2012 or other dataset...
 Having prepared the dataset of TFRecord file format, the pretrained weights of both [vgg_16](https://github.com/tensorflow/models/tree/master/research/slim) and [resnet_v2_101](https://github.com/tensorflow/models/tree/master/research/slim) should be downloaded and restored in semantic segmentation model. The folders should be set up in following structure:
