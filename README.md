@@ -12,7 +12,7 @@ The code is modified from [Deeplab v2](https://github.com/DrSleep/tensorflow-dee
 
 ## Models
 - FCN8([Author](https://github.com/shelhamer/fcn.berkeleyvision.org)): [Fully Convolutional Networks for Semantic Segmentation](https://arxiv.org/abs/1411.4038)
-- U-Net([Author(https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net/)]): [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597)
+- U-Net([Author](https://lmb.informatik.uni-freiburg.de/people/ronneber/u-net)): [U-Net: Convolutional Networks for Biomedical Image Segmentation](https://arxiv.org/abs/1505.04597)
 - SegNet([Author](https://github.com/alexgkendall/SegNet-Tutorial)): [SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation](https://arxiv.org/abs/1511.00561)
 - Deeplab-v1([Author](http://liangchiehchen.com/projects/DeepLab-LargeFOV.html)): [Semantic Image Segmentation with Deep Convolutional Nets and Fully Connected CRFs](https://arxiv.org/abs/1412.7062)
 - Deeplab-v2([Author](http://liangchiehchen.com/projects/DeepLabv2_resnet.html)): [DeepLab: Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs](https://arxiv.org/abs/1606.00915)
