@@ -5,7 +5,9 @@ This repository contains some sementic segmentation models implemented by tensor
 - Convert dataset to TFRecord files format.
 - Data augmentation (e.g., scaling, padding, cropping and flipping).
 - Training various segmentation models with different datasets.
+- Decode label or prediction to generate color image. 
 - Evaluting trained models with mean Intersection over Union (mIoU).
+The code is modified from [Deeplab v2](https://github.com/DrSleep/tensorflow-deeplab-resnet).
 
 ## Models
 - FCN8: [Fully Convolutional Networks for Semantic Segmentation](https://arxiv.org/abs/1411.4038)
