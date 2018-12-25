@@ -25,9 +25,9 @@ Before training a semantic segmentation model, the dataset should be downloaded 
 Then split the dataset into four partitions (training images, training labels, validation images and validation labels ) and put them in separate folders.
 - Convert dataset to TFRecord files:
 ```
-`cd dataset`
+cd dataset
 
-`python build_TFRecord.py --train-image-path folder_name --train-label-path [folder_name] --val-image-path [folder_name] --val-label-path [folder_name]`
+python build_TFRecord.py --train-image-path folder_name --train-label-path [folder_name] --val-image-path [folder_name] --val-label-path [folder_name]
 ```
 
 ## Training with pascal_voc2012 or other dataset...
