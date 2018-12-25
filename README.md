@@ -8,7 +8,7 @@ This repository contains some sementic segmentation models implemented by tensor
 - Decode label or prediction to generate color image. 
 - Evaluting trained models with mean Intersection over Union (mIoU).
 
-The code is modified from [Deeplab v2](https://github.com/DrSleep/tensorflow-deeplab-resnet).
+The code is modified from [Deeplab v2](https://github.com/DrSleep/tensorflow-deeplab-resnet) and only three datasets (pascal_voc2012, cityscapes and ADE20K) are supported.
 
 ## Models
 - FCN8: [Fully Convolutional Networks for Semantic Segmentation](https://arxiv.org/abs/1411.4038)
@@ -33,14 +33,14 @@ cd dataset
 python build_TFRecord.py --train-image-path folder_name --train-label-path [folder_name] --val-image-path [folder_name] --val-label-path [folder_name]
 ```
 
-## Training with pascal_voc2012 or other dataset...
+## Training with pascal_voc2012 (other two datasets are similar)
 Having prepared the dataset of TFRecord file format, the pretrained weights of both [vgg_16](https://github.com/tensorflow/models/tree/master/research/slim) and [resnet_v2_101](https://github.com/tensorflow/models/tree/master/research/slim) should be downloaded and restored in semantic segmentation model. The folders should be set up in following structure:
 
     ├── pretrained                   
     |   ├── vgg_16.ckpt
     |   ├── resnet_v2_101.ckpt
 
-Training shell script (using pascal_voc2012):
+**Training shell script (using pascal_voc2012):**
 - FCN8: 
 
 ```python train.py --data-dir './dataset/tfrecord' --restore-from './pretrained/vgg_16.ckpt' --dataset 'pascal_voc2012' --pretrained-model 'vgg_16' --segmentation-model 'FCN8'```
@@ -90,3 +90,28 @@ Arguments:
 --segmentation-model : The name of semantic segmentation model.
 
 ```
+
+## Evaluation
+- **Simgle scale evaluation (such as FCN8):**
+
+```
+python evaluate.py --data-dir './dataset/tfrecord' './logs/xxxxx.ckpt' --dataset 'pascal_voc2012' --segmentation-model 'FCN8'
+```
+
+- **Multi-scale evaluation:**
+
+```
+python evaluate_msc.py --data-dir './dataset/tfrecord' './logs/xxxxx.ckpt' --dataset 'pascal_voc2012' --segmentation-model 'FCN8'
+```
+
+```
+Arguments:
+--data-dir : Where the TFRecord file locate.
+--restore-from : Path to pretrained weights.
+--dataset : The dataset used to training (e.g., pascal_voc2012, cityscapes and ADE20K)
+--segmentation-model : The name of semantic segmentation model.
+
+```
+
+
+
