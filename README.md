@@ -29,9 +29,15 @@ Then split the dataset into four partitions (training images, training labels, v
 
 ## Training with pascal_voc2012 or other dataset...
 Having prepared the dataset of TFRecord file format, the pretrained weights of both [vgg_16](https://github.com/tensorflow/models/tree/master/research/slim) and [resnet_v2_101](https://github.com/tensorflow/models/tree/master/research/slim) should be downloaded and restored in semantic segmentation model. The folders should be set up in following structure:
-    ├── pretrained                   
-    |   ├── vgg_16.ckpt
-    |   ├── resnet_v2_101.ckpt
+The only thing you have to do to get started is set up the folders in the following structure:
+
+    ├── "dataset_name"                   
+    |   ├── train
+    |   ├── train_labels
+    |   ├── val
+    |   ├── val_labels
+    |   ├── test
+    |   ├── test_labels
 
 Training shell script (using pascal_voc2012):
 - FCN8: `python train.py --data-dir './dataset/tfrecord' --restore-from './pretrained/vgg_16.ckpt' --dataset 'pascal_voc2012' --pretrained-model 'vgg_16' --segmentation-model 'FCN8'`
