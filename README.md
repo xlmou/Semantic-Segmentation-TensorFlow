@@ -7,6 +7,7 @@ This repository contains some sementic segmentation models implemented by tensor
 - Training various segmentation models with different datasets.
 - Decode label or prediction to generate color image. 
 - Evaluting trained models with mean Intersection over Union (mIoU).
+
 The code is modified from [Deeplab v2](https://github.com/DrSleep/tensorflow-deeplab-resnet).
 
 ## Models
@@ -50,4 +51,11 @@ Training shell script (using pascal_voc2012):
 - GCN: `python train.py --data-dir './dataset/tfrecord' --restore-from './pretrained/resnet_v2_101.ckpt' --dataset 'pascal_voc2012' --pretrained-model 'resnet_v2_101' --segmentation-model 'GCN'`
 - ENet: `python train.py --data-dir './dataset/tfrecord' --dataset 'pascal_voc2012' --segmentation-model 'ENet'`
 - ICNet: `python train.py --data-dir './dataset/tfrecord' --dataset 'pascal_voc2012' --segmentation-model 'ICNet'`
+
+arguments:
+- --data-dir : Where the TFRecord file locate.
+- --restore-from : Path to pretrained weights.
+- --dataset : The dataset used to training (e.g., pascal_voc2012, cityscapes and ADE20K)
+- --pretrained-model : Pretrained model name which can be 'vgg_16' or 'resnet_v2_101'.
+- --segmentation-model : The name of semantic segmentation model.
 
