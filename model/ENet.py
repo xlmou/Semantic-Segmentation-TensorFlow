@@ -328,7 +328,8 @@ def bottleneck(inputs,
 
 
 def ENet(inputs, num_classes, is_training=True):
-    '''The ENet model for real-time semantic segmentation!
+    '''The ENet model for real-time semantic segmentation based on 
+       https://github.com/TimoSaemann/ENet
 
     Args:
     - inputs: a 4D Tensor of shape [batch_size, height, width, num_channels].
